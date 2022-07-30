@@ -13,7 +13,7 @@ import {useStateContext } from '../../context/StateContext'
 const ProductDetails = ({ product, products }) => {
 	const { image, name, details, price } = product;
 	// we are importing the change state functions right inside of our code
-	const { decQty, incQty, qty} = useStateContext();
+	const { decQty, incQty, qty, onAdd} = useStateContext();
 	const [index, setIndex] = useState(0);
 	return (
 		<div>
@@ -72,7 +72,7 @@ const ProductDetails = ({ product, products }) => {
 						<button
 							type='button'
 							className='add-to-cart'
-							onClick=''>
+							onClick={() => onAdd(product, qty)}>
 							Add to Cart
 						</button>
 						<button type='button' className='buy-now' onClick=''>
