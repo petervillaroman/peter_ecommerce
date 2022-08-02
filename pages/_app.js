@@ -10,6 +10,7 @@ import { StateContext } from '../context/StateContext';
 
 function MyApp({ Component, pageProps }) {
 	return (
+		// wrapping our entire layout with the context provided inside of StateContext
 		<StateContext>
 		<Layout>
 			<Toaster />

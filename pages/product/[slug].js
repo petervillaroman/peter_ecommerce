@@ -9,11 +9,11 @@ import {
 } from 'react-icons/ai';
 import { client, urlFor } from '../../lib/client';
 import Product from '../../components/Product';
-import {useStateContext } from '../../context/StateContext'
+import { useStateContext } from '../../context/StateContext';
 const ProductDetails = ({ product, products }) => {
 	const { image, name, details, price } = product;
 	// we are importing the change state functions right inside of our code
-	const { decQty, incQty, qty, onAdd} = useStateContext();
+	const { decQty, incQty, qty, onAdd } = useStateContext();
 	const [index, setIndex] = useState(0);
 	return (
 		<div>
